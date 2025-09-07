@@ -59,7 +59,7 @@ py -m venv .venv
 To activate a virtual environment
 
 ```shell
-.\.venv\Scripts\Activate
+.venv\Scripts\Activate
 ```
 To deactivate a virtual environment
 
