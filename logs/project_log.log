@@ -62,3 +62,6 @@
 2025-09-10 19:13:12.296 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
 2025-09-10 19:13:12.296 | INFO     | __main__:<module>:97 - Starting CSV processing...
 2025-09-10 19:13:12.297 | ERROR    | __main__:analyze_earthquake_magnitude:60 - Error processing CSV file: 'Magnitude'
+2025-09-10 19:22:33.191 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-10 19:22:33.191 | INFO     | __main__:<module>:97 - Starting CSV processing...
+2025-09-10 19:22:33.191 | ERROR    | __main__:analyze_earthquake_magnitude:60 - Error processing CSV file: 'Magnitude'
