@@ -95,7 +95,7 @@ def main():
     """
     excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
     logger.info("Starting Excel fetch demonstration...")
-    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xls", excel_url)
+    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
 
 #####################################
 # Conditional Execution
