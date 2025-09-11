@@ -102,3 +102,9 @@
 2025-09-10 20:15:23.253 | ERROR    | __main__:count_word_in_column:46 - Error reading Excel file: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
 2025-09-10 20:15:23.254 | INFO     | __main__:process_excel_file:76 - Processed Excel file: data\Billboard 1990, Word count saved to: processed\Billboard 1990_count.txt
 2025-09-10 20:15:23.254 | INFO     | __main__:<module>:85 - Excel processing complete.
+2025-09-10 20:19:27.111 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-10 20:19:27.111 | INFO     | __main__:main:97 - Starting Excel fetch demonstration...
+2025-09-10 20:19:27.111 | INFO     | __main__:fetch_csv_and_convert_to_excel_file:56 - Fetching Excel data from https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv...
+2025-09-10 20:19:27.546 | INFO     | __main__:write_csv_and_convert_to_excel_file:80 - Writing Excel data to data\Billboard 1990.xlsx...
+2025-09-10 20:19:27.547 | INFO     | __main__:write_csv_and_convert_to_excel_file:84 - SUCCESS: Excel data written to data\Billboard 1990.xlsx
+2025-09-10 20:19:27.548 | INFO     | __main__:fetch_csv_and_convert_to_excel_file:60 - SUCCESS: Excel file fetched and saved as Billboard 1990.xlsx
