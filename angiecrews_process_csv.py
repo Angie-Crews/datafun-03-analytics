@@ -1,5 +1,5 @@
 """
-Process a CSV file on 2020 Happiness ratings by country to analyze the `Ladder score` column and save statistics.
+Process a CSV file on Earthquakes to analyze the `Magnitude` column and save statistics.
 """
 
 #####################################
@@ -22,7 +22,7 @@ from utils_logger import logger
 # Declare Global Variables
 #####################################
 
-
+# TODO: Replace with the names of your folders
 FETCHED_DATA_DIR: str = "data"
 PROCESSED_DIR: str = "processed"
 
@@ -32,8 +32,8 @@ PROCESSED_DIR: str = "processed"
 
 # TODO: Add or replace this with a function that reads and processes your CSV file
 
-def analyze_ladder_score(file_path: pathlib.Path) -> dict:
-    """Analyze the Ladder score column to calculate min, max, mean, and stdev."""
+def analyze_earthquake_magnitude(file_path: pathlib.Path) -> dict:
+    """Analyze the Magnitude column to calculate min, max, mean, and stdev."""
     try:
         # initialize an empty list to store the scores
         score_list = []
@@ -42,7 +42,7 @@ def analyze_ladder_score(file_path: pathlib.Path) -> dict:
             dict_reader = csv.DictReader(file)  
             for row in dict_reader:
                 try:
-                    score = float(row["Ladder score"])  # Extract and convert to float
+                    score = float(row["Magnitude"])  # Extract and convert to float
                     # append the score to the list
                     score_list.append(score)
                 except ValueError as e:
@@ -61,17 +61,17 @@ def analyze_ladder_score(file_path: pathlib.Path) -> dict:
         return {}
 
 def process_csv_file():
-    """Read a CSV file, analyze Ladder score, and save the results."""
+    """Read a CSV file, analyze earthquake magnitudes, and save the results."""
     
     # TODO: Replace with path to your CSV data file
-    input_file = pathlib.Path(FETCHED_DATA_DIR, "2020_happiness.csv")
+    input_file = pathlib.Path(FETCHED_DATA_DIR, "earthquakes.csv")
     
     # TODO: Replace with path to your CSV processed file
-    output_file = pathlib.Path(PROCESSED_DIR, "happiness_ladder_score_stats.txt")
+    output_file = pathlib.Path(PROCESSED_DIR, "earthquake_magnitude_stats.txt")
     
     # TODO: Call your new function to process YOUR CSV file
     # TODO: Create a new local variable to store the result of the function call
-    stats = analyze_ladder_score(input_file)
+    stats = analyze_earthquake_magnitude(input_file)
 
     # Create the output directory if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -80,7 +80,7 @@ def process_csv_file():
     with output_file.open('w') as file:
 
         # TODO: Update the output to describe your results
-        file.write("Ladder Score Statistics:\n")
+        file.write("Earthquake Magnitude:\n")
         file.write(f"Minimum: {stats['min']:.2f}\n")
         file.write(f"Maximum: {stats['max']:.2f}\n")
         file.write(f"Mean: {stats['mean']:.2f}\n")
