@@ -1,6 +1,6 @@
 """
-This example file fetches JSON data of astronauts currently in space 
-from the web and saves it to a local file named example_data/astronauts.json.
+This example file fetches JSON data of the English Standard Version of the Bible 
+from the web and saves it to a local file named data/bible.json.
 
 TODO: Save a copy of the provided utils_logger.py file 
 in the same folder as this file.
@@ -94,9 +94,9 @@ def main():
     """
     Main function to demonstrate fetching JSON data.
     """
-    json_url = 'http://api.open-notify.org/astros.json'
+    json_url = 'https://raw.githubusercontent.com/jadenzaleski/BibleTranslations/refs/heads/master/ESV/ESV_bible.json'
     logger.info("Starting JSON fetch demonstration...")
-    fetch_json_file(FETCHED_DATA_DIR, "astros.json", json_url)
+    fetch_json_file(FETCHED_DATA_DIR, "bible.json", json_url)
 
 #####################################
 # Conditional Execution
