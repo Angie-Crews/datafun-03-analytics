@@ -153,3 +153,7 @@
 2025-09-10 20:55:31.445 | ERROR    | __main__:count_word_in_column:46 - Error reading Excel file: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
 2025-09-10 20:55:31.446 | INFO     | __main__:process_excel_file:76 - Processed Excel file: data\Billboard 1990, Word count saved to: processed\Billboard 1990_count.txt
 2025-09-10 20:55:31.446 | INFO     | __main__:<module>:85 - Excel processing complete.
+2025-09-10 20:58:48.714 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-10 20:58:48.715 | INFO     | __main__:<module>:83 - Starting Excel processing...
+2025-09-10 20:58:48.726 | INFO     | __main__:process_excel_file:76 - Processed Excel file: data\Billboard 1990.xlsx, Word count saved to: processed\Billboard 1990_count.txt
+2025-09-10 20:58:48.726 | INFO     | __main__:<module>:85 - Excel processing complete.
