@@ -1,6 +1,6 @@
 """
 This example file fetches an Excel file from the web 
-and saves it to a local file named feedback.xlsx in a folder named example_data.
+and saves it to a local file named Billboard 1990.xlsx in a folder named data.
 
 Please save a copy of the provided utils_logger.py file 
 in the same folder as this file.
@@ -93,9 +93,9 @@ def main():
     """
     Main function to demonstrate fetching Excel data.
     """
-    excel_url = 'https://raw.githubusercontent.com/denisecase/datafun-03-analytics/main/hosted/Feedback.xlsx'
+    excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
     logger.info("Starting Excel fetch demonstration...")
-    fetch_excel_file(FETCHED_DATA_DIR, "Feedback.xlsx", excel_url)
+    fetch_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
 
 #####################################
 # Conditional Execution
