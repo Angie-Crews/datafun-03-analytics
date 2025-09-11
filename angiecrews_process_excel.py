@@ -50,7 +50,7 @@ def process_excel_file():
     """Read an Excel file, count occurrences of 'Love' in column ‘B’, and save the result."""
     
     # TODO: Replace with path to your Excel data file
-    input_file = pathlib.Path(FETCHED_DATA_DIR, "Billboard 1990")
+    input_file = pathlib.Path(FETCHED_DATA_DIR, "Billboard 1990.xlsx")
 
     # TODO: Replace with path to your Excel processed file
     output_file = pathlib.Path(PROCESSED_DIR, "Billboard 1990_count.txt")
