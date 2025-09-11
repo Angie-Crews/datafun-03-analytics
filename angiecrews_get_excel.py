@@ -13,6 +13,7 @@ in the same folder as this file.
 # Import from Python Standard Library
 import pathlib
 import sys
+import pandas as pd
 
 # Import from external packages
 import requests
@@ -77,7 +78,7 @@ def write_csv_and_convert_to_excel_file(folder_name: str, filename: str, binary_
     """
     file_path = pathlib.Path(folder_name).joinpath(filename)
     try:
-        logger.info(f"Writing Excel data to {file_path}...")
+        logger.info(f"Writing CSV to Excel data to {file_path}...")
         file_path.parent.mkdir(parents=True, exist_ok=True)
         with file_path.open('wb') as file:
             file.write(binary_data)
@@ -95,7 +96,7 @@ def main():
     """
     excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
     logger.info("Starting Excel fetch demonstration...")
-    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
+    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990", excel_url)
 
 #####################################
 # Conditional Execution
