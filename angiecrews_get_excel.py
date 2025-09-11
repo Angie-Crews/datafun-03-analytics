@@ -56,14 +56,14 @@ def fetch_csv_and_convert_to_excel_file(folder_name: str, filename: str, url: st
         logger.info(f"Fetching Excel data from {url}...")
         response = requests.get(url)
         response.raise_for_status()
-        write_excel_file(folder_name, filename, response.content)
+        write_csv_and_convert_to_excel_file(folder_name, filename, response.content)
         logger.info(f"SUCCESS: Excel file fetched and saved as {filename}")
     except requests.exceptions.HTTPError as http_err:
         logger.error(f"HTTP error occurred: {http_err}")
     except requests.exceptions.RequestException as req_err:
         logger.error(f"Request error occurred: {req_err}")
 
-def write_excel_file(folder_name: str, filename: str, binary_data: bytes) -> None:
+def write_csv_and_convert_to_excel_file(folder_name: str, filename: str, binary_data: bytes) -> None:
     """
     Write Excel binary data to a file.
 
@@ -95,7 +95,7 @@ def main():
     """
     excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
     logger.info("Starting Excel fetch demonstration...")
-    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990", excel_url)
+    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
 
 #####################################
 # Conditional Execution
