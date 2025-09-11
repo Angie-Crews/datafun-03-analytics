@@ -13,7 +13,6 @@ in the same folder as this file.
 # Import from Python Standard Library
 import pathlib
 import sys
-import pandas as pd
 
 # Import from external packages
 import requests
@@ -54,7 +53,7 @@ def fetch_csv_and_convert_to_excel_file(folder_name: str, filename: str, url: st
         return
 
     try:
-        logger.info(f"Fetching Excel data from {url}...")
+        logger.info(f"Fetching CSV data from {url}...")
         response = requests.get(url)
         response.raise_for_status()
         write_csv_and_convert_to_excel_file(folder_name, filename, response.content)
