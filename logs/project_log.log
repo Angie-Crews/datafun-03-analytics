@@ -59,3 +59,6 @@
 2025-09-10 19:08:12.374 | INFO     | __main__:write_csv_file:80 - Writing CSV data to data\Earthquakes.csv...
 2025-09-10 19:08:12.378 | INFO     | __main__:write_csv_file:84 - SUCCESS: CSV data written to data\Earthquakes.csv
 2025-09-10 19:08:12.379 | INFO     | __main__:fetch_csv_file:60 - SUCCESS: CSV file fetched and saved as Earthquakes.csv
+2025-09-10 19:13:12.296 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-10 19:13:12.296 | INFO     | __main__:<module>:97 - Starting CSV processing...
+2025-09-10 19:13:12.297 | ERROR    | __main__:analyze_earthquake_magnitude:60 - Error processing CSV file: 'Magnitude'
