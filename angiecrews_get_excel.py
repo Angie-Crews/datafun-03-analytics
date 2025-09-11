@@ -16,6 +16,7 @@ import sys
 
 # Import from external packages
 import requests
+import pandas as pd
 
 # Ensure project root is in sys.path for local imports
 sys.path.append(str(pathlib.Path(__file__).resolve().parent))
@@ -33,9 +34,9 @@ FETCHED_DATA_DIR = "data"
 # Define Functions
 #####################################
 
-def fetch_excel_file(folder_name: str, filename: str, url: str) -> None:
+def fetch_csv_and_convert_to_excel_file(folder_name: str, filename: str, url: str) -> None:
     """
-    Fetch Excel data from the given URL and write it to a file.
+    Fetch CSV data from a URL, convert it to Excel format, and write it to a file.
 
     Args:
         folder_name (str): Name of the folder to save the file.
@@ -95,7 +96,7 @@ def main():
     """
     excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
     logger.info("Starting Excel fetch demonstration...")
-    fetch_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
+    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
 
 #####################################
 # Conditional Execution
