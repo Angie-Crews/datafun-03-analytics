@@ -53,7 +53,7 @@ def fetch_csv_and_convert_to_excel_file(folder_name: str, filename: str, url: st
         return
 
     try:
-        logger.info(f"Fetching CSV data from {url}...")
+        logger.info(f"Fetching CSV to Excel data from {url}...")
         response = requests.get(url)
         response.raise_for_status()
         write_csv_and_convert_to_excel_file(folder_name, filename, response.content)
@@ -81,9 +81,9 @@ def write_csv_and_convert_to_excel_file(folder_name: str, filename: str, binary_
         file_path.parent.mkdir(parents=True, exist_ok=True)
         with file_path.open('wb') as file:
             file.write(binary_data)
-        logger.info(f"SUCCESS: Excel data written to {file_path}")
+        logger.info(f"SUCCESS: CSV to Excel data written to {file_path}")
     except IOError as io_err:
-        logger.error(f"Error writing Excel data to {file_path}: {io_err}")
+        logger.error(f"Error writing CSV to Excel data to {file_path}: {io_err}")
 
 #####################################
 # Define main() function
@@ -93,9 +93,9 @@ def main():
     """
     Main function to demonstrate fetching Excel data.
     """
-    excel_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
-    logger.info("Starting Excel fetch demonstration...")
-    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", excel_url)
+    csv_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/Billboard%201990.csv'
+    logger.info("Starting CSV-to-Excel fetch demonstration...")
+    fetch_csv_and_convert_to_excel_file(FETCHED_DATA_DIR, "Billboard 1990.xlsx", csv_url)
 
 #####################################
 # Conditional Execution
