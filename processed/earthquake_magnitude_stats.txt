@@ -1,1 +1,5 @@
 Earthquake Magnitude:
+Minimum: 5.50
+Maximum: 9.10
+Mean: 5.88
+Standard Deviation: 0.42
