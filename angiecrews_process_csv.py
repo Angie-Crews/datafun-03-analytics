@@ -37,7 +37,7 @@ def analyze_earthquake_magnitude(file_path: pathlib.Path) -> dict:
     try:
         # initialize an empty list to store the scores
         score_list = []
-        with file_path.open('r') as file:
+        with file_path.open('r', newline='', encoding='utf-8') as file:
             # csv.DictReader() methods to read into a DictReader so we can access named columns in the csv file
             dict_reader = csv.DictReader(file)  
             for row in dict_reader:
@@ -47,7 +47,14 @@ def analyze_earthquake_magnitude(file_path: pathlib.Path) -> dict:
                     score_list.append(score)
                 except ValueError as e:
                     logger.warning(f"Skipping invalid row: {row} ({e})")
-        
+
+# 👀 Show the list of collected magnitudes
+        logger.info(f"Collected magnitudes: {score_list}")
+
+        if not score_list:
+            logger.error("No valid Magnitude values found in CSV file.")
+            return {}
+
         # Calculate statistics
         stats = {
             "min": min(score_list),
@@ -60,7 +67,7 @@ def analyze_earthquake_magnitude(file_path: pathlib.Path) -> dict:
         logger.error(f"Error processing CSV file: {e}")
         return {}
 
-def process_csv_file():
+def angiecrews_process_csv():
     """Read a CSV file, analyze earthquake magnitudes, and save the results."""
     
     # TODO: Replace with path to your CSV data file
@@ -95,5 +102,5 @@ def process_csv_file():
 
 if __name__ == "__main__":
     logger.info("Starting CSV processing...")
-    process_csv_file()
+    angiecrews_process_csv()
     logger.info("CSV processing complete.")

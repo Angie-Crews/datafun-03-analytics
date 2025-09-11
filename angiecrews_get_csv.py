@@ -93,7 +93,7 @@ def main():
     """
     Main function to demonstrate fetching CSV data.
     """
-    csv_url = 'https://github.com/MainakRepositor/Datasets/blob/master/earthquakes.csv'
+    csv_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/refs/heads/master/earthquakes.csv'
     logger.info("Starting CSV fetch demonstration...")
     fetch_csv_file(FETCHED_DATA_DIR, "Earthquakes.csv", csv_url)
 
