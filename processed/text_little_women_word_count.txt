@@ -1,5 +1,6 @@
-Occurrences of 'Jo': 1
-Occurrences of 'Meg': 1
-Occurrences of 'Beth': 1
-Occurrences of 'Amy': 1
-Occurrences of 'Laurie': 1
+Little Women - Total word count: 195624
+Count of 'jo': 1915
+Count of 'meg': 711
+Count of 'beth': 511
+Count of 'amy': 675
+Count of 'laurie': 615

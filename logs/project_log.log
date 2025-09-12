@@ -240,3 +240,7 @@
 2025-09-11 20:17:56.906 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
 2025-09-11 20:17:56.907 | INFO     | __main__:process_text_file:72 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
 2025-09-11 20:17:56.907 | INFO     | __main__:<module>:81 - Text processing complete.
+2025-09-11 20:23:35.827 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 20:23:35.827 | INFO     | __main__:<module>:56 - Starting text processing...
+2025-09-11 20:23:35.873 | INFO     | __main__:process_text_file:47 - Processed text file: data\little_women.txt, word counts saved to: processed\text_little_women_word_count.txt
+2025-09-11 20:23:35.874 | INFO     | __main__:<module>:58 - Text processing complete.
