@@ -1,5 +1,5 @@
 """
-Process a text file to count occurrences of the word "Romeo" and save the result.
+Process a text file to count occurrences of the words "Jo, Meg, Beth, Amy and Laurie" and save the result.
 """
 
 #####################################
@@ -28,48 +28,25 @@ PROCESSED_DIR: str = "processed"
 # Define Functions
 #####################################
 
-def count_word_occurrences(file_path: pathlib.Path, word: str) -> int:
-    """Count the occurrences of a specific word in a text file (case-insensitive)."""
-    try:
-       with open("little_women.txt", "r", encoding="utf-8-sig") as file:
-            text: str = file.read()
-            return text.lower().count(word.lower())
-    except Exception as e:
-        logger.error(f"Error reading text file: {e}")
-        return 1
-
 def process_text_file():
-    """Read a text file, count occurrences of 'Jo', 'Meg', 'Beth', and 'Amy', and save the result."""
-
-    # Replace with path to your text data file
+    """Read Little Women, count words, and save the result."""
     input_file = pathlib.Path(FETCHED_DATA_DIR, "little_women.txt")
-
-    # Replace with path to your text processed file
     output_file = pathlib.Path(PROCESSED_DIR, "text_little_women_word_count.txt")
-
-    # Replace with the word you want to count from your text file
-
-    # Make any necessary changes to the logic
-    jo_count = count_word_occurrences(input_file, "Jo")
-    meg_count = count_word_occurrences(input_file, "Meg")
-    beth_count = count_word_occurrences(input_file, "Beth")
-    amy_count = count_word_occurrences(input_file, "Amy")
-    laurie_count = count_word_occurrences(input_file, "Laurie")
-
-    # Create the output directory if it doesn't exist
-    output_file.parent.mkdir(parents=True, exist_ok=True)
-
-    # Write the results to the output file
-    with output_file.open('w') as file:
-        # Update the output to describe your results
-        file.write(f"Occurrences of 'Jo': {jo_count}\n")
-        file.write(f"Occurrences of 'Meg': {meg_count}\n")
-        file.write(f"Occurrences of 'Beth': {beth_count}\n")
-        file.write(f"Occurrences of 'Amy': {amy_count}\n")
-        file.write(f"Occurrences of 'Laurie': {laurie_count}\n")
-    
-    # Log the processing of the TEXT file
-    logger.info(f"Processed text file: {input_file}, Word count saved to: {output_file}")
+    try:
+        with input_file.open('r', encoding='utf-8') as file:
+            text = file.read()
+        word_count = len(text.split())
+        # Count specific words (case-insensitive)
+        words_to_count = ['jo', 'meg', 'beth', 'amy', 'laurie']
+        counts = {word: text.lower().count(word) for word in words_to_count}
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        with output_file.open('w', encoding='utf-8') as file:
+            file.write(f"Little Women - Total word count: {word_count}\n")
+            for word in words_to_count:
+                file.write(f"Count of '{word}': {counts[word]}\n")
+        logger.info(f"Processed text file: {input_file}, word counts saved to: {output_file}")
+    except Exception as e:
+        logger.error(f"Error processing text file: {e}")
 
 #####################################
 # Main Execution

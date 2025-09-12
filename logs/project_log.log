@@ -222,3 +222,21 @@
 2025-09-11 20:10:52.006 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
 2025-09-11 20:10:52.007 | INFO     | __main__:process_text_file:72 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
 2025-09-11 20:10:52.007 | INFO     | __main__:<module>:81 - Text processing complete.
+2025-09-11 20:15:07.330 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 20:15:07.330 | INFO     | __main__:<module>:79 - Starting text processing...
+2025-09-11 20:15:07.330 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:15:07.330 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:15:07.330 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:15:07.331 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:15:07.331 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:15:07.331 | INFO     | __main__:process_text_file:72 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
+2025-09-11 20:15:07.332 | INFO     | __main__:<module>:81 - Text processing complete.
+2025-09-11 20:17:56.903 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 20:17:56.903 | INFO     | __main__:<module>:79 - Starting text processing...
+2025-09-11 20:17:56.904 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:17:56.904 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:17:56.905 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:17:56.906 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:17:56.906 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: [Errno 2] No such file or directory: 'little_women.txt'
+2025-09-11 20:17:56.907 | INFO     | __main__:process_text_file:72 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
+2025-09-11 20:17:56.907 | INFO     | __main__:<module>:81 - Text processing complete.
