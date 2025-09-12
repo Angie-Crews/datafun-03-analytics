@@ -22,7 +22,6 @@ sys.path.append(str(pathlib.Path(__file__).resolve().parent))
 
 # Import local modules
 from utils_logger import logger
-from pathlib import Path
 
 #####################################
 # Declare Global Variables
@@ -80,7 +79,10 @@ def write_txt_file(folder_name: str, filename: str, string_data: str) -> None:
     try:
         logger.info(f"Writing data to {file_path}...")
         file_path.parent.mkdir(parents=True, exist_ok=True)
-        with file_path.open('w') as file:
+        # Remove BOM if present
+        string_data = string_data.lstrip('\ufeff')
+        # Write with UTF-8 encoding
+        with file_path.open('w', encoding='utf-8') as file:
             file.write(string_data)
         logger.info(f"SUCCESS: Data written to {file_path}")
     except IOError as io_err:
