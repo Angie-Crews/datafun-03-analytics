@@ -1,0 +1,200 @@
+Average Surface Temperatures by Country
+=======================================
+
+Country                              Celsius   Fahrenheit
+----------------------------------- -------- ------------
+Afghanistan (Asia/Pacific)              9.72        49.50
+Albania (Europe)                       12.94        55.30
+Algeria (Africa)                       18.51        65.33
+Andorra (Europe)                        5.43        41.78
+Angola (Africa)                        22.59        72.66
+Antigua and Barbuda (America)          26.18        79.13
+Argentina (America)                    15.52        59.94
+Armenia (Europe)                        7.27        45.09
+Australia (Asia/Pacific)               19.18        66.52
+Austria (Europe)                        7.13        44.84
+Azerbaijan (Europe)                    11.76        53.17
+Bahamas, The (America)                 25.39        77.70
+Bahrain (Asia/Pacific)                 26.17        79.11
+Bangladesh (Asia/Pacific)              25.39        77.71
+Barbados (America)                     26.43        79.58
+Belarus (Europe)                        7.34        45.22
+Belgium (Europe)                       10.42        50.75
+Belize (America)                       25.63        78.14
+Benin (Africa)                         27.24        81.04
+Bhutan (Asia/Pacific)                  10.57        51.03
+Bolivia (America)                      17.97        64.34
+Bosnia and Herzegovina (Europe)        10.34        50.62
+Botswana (Africa)                      21.65        70.96
+Brazil (America)                       24.49        76.08
+Brunei Darussalam (Asia/Pacific)       26.32        79.38
+Bulgaria (Europe)                      11.48        52.67
+Burkina Faso (Africa)                  28.55        83.39
+Burundi (Africa)                       20.50        68.90
+Cabo Verde (Africa)                    23.05        73.49
+Cambodia (Asia/Pacific)                27.62        81.72
+Cameroon (Africa)                      24.36        75.84
+Canada (America)                        0.40        32.71
+Central African Republic (Africa)      25.74        78.33
+Chad (Africa)                          27.99        82.37
+Chile (America)                         9.67        49.40
+China (Asia/Pacific)                   12.78        55.00
+Colombia (America)                     22.74        72.94
+Comoros (Africa)                       25.56        78.00
+Congo, Dem. Rep. (Africa)              23.78        74.80
+Congo, Rep. (Africa)                   24.70        76.46
+Costa Rica (America)                   22.35        72.22
+Cote d'Ivoire (Africa)                 26.33        79.40
+Croatia (Europe)                       12.26        54.06
+Cuba (America)                         25.50        77.91
+Cyprus (Europe)                        19.24        66.62
+Czechia (Europe)                        8.68        47.62
+Denmark (Europe)                        8.97        48.15
+Djibouti (Africa)                      28.42        83.15
+Dominica (America)                     25.70        78.26
+Dominican Republic (America)           24.04        75.28
+Ecuador (America)                      20.89        69.60
+Egypt, Arab Rep. (Africa)              22.29        72.12
+El Salvador (America)                  25.81        78.45
+Equatorial Guinea (Africa)             23.94        75.09
+Eritrea (Africa)                       25.12        77.22
+Estonia (Europe)                        6.30        43.34
+Eswatini (Africa)                      19.44        66.99
+Ethiopia (Africa)                      22.68        72.83
+Fiji (Asia/Pacific)                    24.34        75.82
+Finland (Europe)                        4.92        40.85
+France (Europe)                        12.99        55.38
+French Polynesia (Asia/Pacific)        25.66        78.19
+Gabon (Africa)                         24.68        76.42
+Gambia, The (Africa)                   27.50        81.50
+Georgia (Europe)                        8.36        47.05
+Germany (Europe)                        9.53        49.16
+Ghana (Africa)                         27.20        80.95
+Gibraltar (Europe)                     17.70        63.86
+Greece (Europe)                        15.65        60.18
+Greenland (America)                   -18.19        -0.74
+Grenada (America)                      26.50        79.70
+Guatemala (America)                    22.02        71.63
+Guinea (Africa)                        25.92        78.65
+Guinea-Bissau (Africa)                 27.36        81.24
+Guyana (America)                       25.49        77.88
+Haiti (America)                        25.20        77.35
+Honduras (America)                     23.53        74.35
+Hungary (Europe)                       11.30        52.34
+Iceland (Europe)                        1.84        35.31
+India (Asia/Pacific)                   22.58        72.64
+Indonesia (Asia/Pacific)               25.35        77.63
+Iran, Islamic Rep. (Asia/Pacific)      16.22        61.19
+Iraq (Asia/Pacific)                    23.47        74.25
+Ireland (Europe)                        9.93        49.87
+Isle of Man (Europe)                   10.38        50.68
+Israel (Asia/Pacific)                  20.13        68.23
+Italy (Europe)                         12.45        54.41
+Jamaica (America)                      25.67        78.20
+Japan (Asia/Pacific)                   13.10        55.58
+Jersey (Europe)                        12.21        53.97
+Jordan (Asia/Pacific)                  19.41        66.94
+Kazakhstan (Asia/Pacific)               6.71        44.07
+Kenya (Africa)                         22.77        72.99
+Kiribati (Asia/Pacific)                26.83        80.30
+Korea, Rep. (Asia/Pacific)             12.91        55.24
+Kosovo (Europe)                        10.51        50.92
+Kuwait (Asia/Pacific)                  26.27        79.29
+Kyrgyz Republic (Asia/Pacific)          2.12        35.82
+Lao PDR (Asia/Pacific)                 23.07        73.52
+Latvia (Europe)                         6.85        44.33
+Lebanon (Asia/Pacific)                 16.44        61.58
+Lesotho (Africa)                       11.47        52.65
+Liberia (Africa)                       25.17        77.31
+Libya (Africa)                         22.17        71.91
+Liechtenstein (Europe)                  6.17        43.10
+Lithuania (Europe)                      7.40        45.31
+Luxembourg (Europe)                     9.44        48.99
+Madagascar (Africa)                    21.95        71.50
+Malawi (Africa)                        22.40        72.32
+Malaysia (Asia/Pacific)                26.30        79.34
+Mali (Africa)                          28.66        83.59
+Mauritania (Africa)                    28.62        83.51
+Mauritius (Africa)                     24.31        75.75
+Mexico (America)                       20.77        69.39
+Micronesia, Fed. Sts. (Asia/Pacific)    27.11        80.80
+Moldova (Europe)                       10.54        50.98
+Monaco (Europe)                        14.77        58.59
+Mongolia (Asia/Pacific)                 0.76        33.37
+Montenegro (Europe)                    11.28        52.31
+Morocco (Africa)                       18.18        64.73
+Mozambique (Africa)                    23.84        74.90
+Myanmar (Asia/Pacific)                 24.68        76.43
+Namibia (Africa)                       22.10        71.79
+Nepal (Asia/Pacific)                   13.21        55.77
+Netherlands (Europe)                   10.49        50.89
+New Zealand (Asia/Pacific)             11.40        52.53
+Nicaragua (America)                    25.67        78.21
+Niger (Africa)                         28.22        82.80
+Nigeria (Africa)                       26.82        80.27
+North Macedonia (Europe)               11.25        52.24
+Norway (Europe)                         3.66        38.59
+Oman (Asia/Pacific)                    27.90        82.21
+Pakistan (Asia/Pacific)                 7.43        45.37
+Panama (America)                       24.92        76.86
+Papua New Guinea (Asia/Pacific)        22.39        72.31
+Paraguay (America)                     22.64        72.75
+Peru (America)                         15.83        60.49
+Philippines (Asia/Pacific)             26.03        78.85
+Poland (Europe)                         8.82        47.87
+Portugal (Europe)                      16.20        61.15
+Qatar (Asia/Pacific)                   27.46        81.43
+Romania (Europe)                       10.28        50.51
+Russian Federation (Europe)             1.94        35.49
+Rwanda (Africa)                        19.31        66.76
+Samoa (Asia/Pacific)                   25.48        77.86
+San Marino (Europe)                    14.75        58.54
+Sao Tome and Principe (Africa)         25.80        78.43
+Saudi Arabia (Asia/Pacific)            25.81        78.45
+Senegal (Africa)                       27.59        81.67
+Serbia (Europe)                        11.61        52.90
+Sierra Leone (Africa)                  25.83        78.49
+Singapore (Asia/Pacific)               27.04        80.67
+Slovak Republic (Europe)                9.24        48.64
+Slovenia (Europe)                      10.29        50.53
+Solomon Islands (Asia/Pacific)         26.18        79.12
+Somalia (Africa)                       26.58        79.84
+South Africa (Africa)                  17.75        63.95
+South Sudan (Africa)                   27.79        82.02
+Spain (Europe)                         14.43        57.97
+Sri Lanka (Asia/Pacific)               26.59        79.86
+St. Kitts and Nevis (America)          26.17        79.10
+St. Lucia (America)                    26.56        79.81
+St. Vincent and the Grenadines (America)    26.42        79.55
+Sudan (Africa)                         28.24        82.84
+Suriname (America)                     26.24        79.22
+Svalbard and Jan Mayen (Europe)        -7.50        18.49
+Sweden (Europe)                         5.69        42.24
+Switzerland (Europe)                    6.52        43.73
+Syrian Arab Republic (Asia/Pacific)    18.40        65.12
+Tajikistan (Asia/Pacific)               5.18        41.32
+Tanzania (Africa)                      23.61        74.50
+Thailand (Asia/Pacific)                26.93        80.47
+Timor-Leste (Asia/Pacific)             24.52        76.14
+Togo (Africa)                          27.08        80.75
+Tonga (Asia/Pacific)                   24.79        76.62
+Trinidad and Tobago (America)          26.33        79.39
+Tunisia (Africa)                       19.59        67.26
+Turkiye (Asia/Pacific)                 11.78        53.20
+Turkmenistan (Asia/Pacific)            16.38        61.48
+Turks & Caicos Islands (America)       26.06        78.91
+Uganda (Africa)                        22.72        72.90
+Ukraine (Europe)                        9.25        48.65
+United Arab Emirates (Asia/Pacific)    28.06        82.50
+United Kingdom (Europe)                 9.84        49.71
+United States of America (Europe)      11.79        53.22
+Uruguay (America)                      17.26        63.08
+Uzbekistan (Asia/Pacific)              12.89        55.20
+Vanuatu (Asia/Pacific)                 25.35        77.64
+Vatican City (Europe)                  15.73        60.32
+Venezuela, RB (America)                25.13        77.24
+Viet Nam (Asia/Pacific)                24.75        76.54
+West Bank and Gaza (Asia/Pacific)      20.42        68.76
+Yemen, Rep. (Asia/Pacific)             23.93        75.08
+Zambia (Africa)                        22.12        71.82
+Zimbabwe (Africa)                      21.01        69.82

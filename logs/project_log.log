@@ -300,3 +300,24 @@
 2025-09-12 16:44:15.013 | INFO     | __main__:<module>:91 - Starting JSON processing...
 2025-09-12 16:44:15.016 | INFO     | __main__:process_json_file:84 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
 2025-09-12 16:44:15.016 | INFO     | __main__:<module>:93 - JSON processing complete.
+2025-09-12 16:45:16.907 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:45:16.908 | INFO     | __main__:<module>:91 - Starting JSON processing...
+2025-09-12 16:45:16.911 | INFO     | __main__:process_json_file:84 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:45:16.911 | INFO     | __main__:<module>:93 - JSON processing complete.
+2025-09-12 16:46:52.935 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:46:52.935 | INFO     | __main__:<module>:91 - Starting JSON processing...
+2025-09-12 16:46:52.938 | INFO     | __main__:process_json_file:84 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:46:52.938 | INFO     | __main__:<module>:93 - JSON processing complete.
+2025-09-12 16:53:19.247 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:53:19.247 | INFO     | __main__:<module>:89 - Starting JSON processing...
+2025-09-12 16:53:19.249 | INFO     | __main__:process_json_file:82 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:53:19.249 | INFO     | __main__:<module>:91 - JSON processing complete.
+2025-09-12 16:55:19.576 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:55:19.576 | INFO     | __main__:<module>:89 - Starting JSON processing...
+2025-09-12 16:55:19.578 | INFO     | __main__:process_json_file:82 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:55:19.579 | INFO     | __main__:<module>:91 - JSON processing complete.
+2025-09-12 17:29:19.056 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 17:39:18.439 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 17:39:18.439 | INFO     | __main__:process_json_file:86 - Starting JSON processing...
+2025-09-12 17:39:18.444 | INFO     | __main__:save_results_to_text:82 - Results saved to processed\avg_temp_by_country.txt
+2025-09-12 17:39:18.444 | INFO     | __main__:process_json_file:91 - JSON processing complete.
