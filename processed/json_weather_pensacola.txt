@@ -1,4 +1,0 @@
-Current weather in Pensacola, Florida:
-Temperature: °F
-Wind Speed: %
-Humidity: 
