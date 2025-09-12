@@ -1,22 +1,28 @@
 """
-Process a JSON file to count books chapters and verses of the Bible.
-JSON file is in the format where books is a list of dictionaries with keys "name", "chapters", and "verses".
+Process a JSON file to give information about Pensacola, Florida weather.
 
 {
-    "Bible": [
-        {
-            "books": "Genesis",
-            "chapters": 50,
-            "verses": 1533
+    "weather": {
+        "current": {
+            "temperature": 75,
+            "wind_speed": 5,
+            "humidity": 60
         },
-        {
-            "books": "Exodus",
-            "chapters": 40,
-            "verses": 1213
-        }
-    ],
-    "number": 2,
-    "message": "success"
+        "hourly": [
+            {
+                "time": "2023-10-01T12:00:00Z",
+                "temperature": 76,
+                "wind_speed": 6,
+                "humidity": 58
+            },
+            {
+                "time": "2023-10-01T13:00:00Z",
+                "temperature": 77,
+                "wind_speed": 7,
+                "humidity": 57
+            }
+        ]
+    }
 }
 
 """
@@ -49,60 +55,23 @@ PROCESSED_DIR: str = "processed"
 
 # TODO: Add or replace this with a function that reads and processes your JSON file
 
-def count_books_chapters_verses(file_path: pathlib.Path) -> dict:
-    """Count the number of chapters and verses in each book from a JSON file."""
-    try:
-        # Open the JSON file using the file_path passed in as an argument
-        with file_path.open('r') as file:
-
-            # Use the json module load() function 
-            # to read data file into a Python dictionary
-            data = json.load(file)  
-
-            # initialize an empty dictionary to store the counts
-            book_counts = {}
-
-            # books is a list of dictionaries in the JSON file
-            books_list: list = data.get("books", [])
-
-            # For each book in the list, get the name, chapters, and verses
-            for book_dict in books_list:  
-                name = book_dict.get("books", "Unknown")
-                chapters = book_dict.get("chapters", 0)
-                verses = book_dict.get("verses", 0)
-                book_counts[name] = {"chapters": chapters, "verses": verses}
-
-            # Return the dictionary with counts of chapters and verses by book    
-            return book_counts
-    except Exception as e:
-        logger.error(f"Error reading or processing JSON file: {e}")
-        return {} # return an empty dictionary in case of error
-
-    """Read a JSON file, count books chapters and verses of the Bible, and save the result."""
-
 def process_json_file():
-    """Read a JSON file, count chapters and verses by book, and save the result."""
-
-    # Replace with path to your JSON data file
-    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "bible_books.json")
-
-    # Replace with path to your JSON processed file
-    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "json_books_chapters_verses.txt")
-    
-    # Call the function to process your JSON file
-    book_counts = count_books_chapters_verses(input_file)
-
-    # Create the output directory if it doesn't exist
-    output_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    # Open the output file in write mode and write the results
-    with output_file.open('w') as file:
-        file.write("Books, Chapters, and Verses:\n")
-        for book, counts in book_counts.items():
-            file.write(f"{book}: Chapters={counts['chapters']}, Verses={counts['verses']}\n")
-    
-    # Log the processing of the JSON file
-    logger.info(f"Processed JSON file: {input_file}, Results saved to: {output_file}")
-    logger.info("Starting JSON processing...")
-    process_json_file()
-    logger.info("JSON processing complete.")
+    """Read weather JSON, extract info, and save the result."""
+    input_file = pathlib.Path(FETCHED_DATA_DIR, "pensacola_weather.json")
+    output_file = pathlib.Path(PROCESSED_DIR, "json_pensacola_weather.txt")
+    try:
+        with input_file.open('r', encoding='utf-8') as file:
+            data = json.load(file)
+        current_weather = data.get("weather", {}).get("current", {})
+        temperature = current_weather.get("temperature", "N/A")
+        wind_speed = current_weather.get("wind_speed", "N/A")
+        humidity = current_weather.get("humidity", "N/A")
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        with output_file.open('w', encoding='utf-8') as file:
+            file.write("Pensacola Weather - Current Conditions:\n")
+            file.write(f"Temperature: {temperature}°F\n")
+            file.write(f"Wind Speed: {wind_speed} mph\n")
+            file.write(f"Humidity: {humidity}%\n")
+        logger.info(f"Processed JSON file: {input_file}, weather info saved to: {output_file}")
+    except Exception as e:
+        logger.error(f"Error processing JSON file: {e}")

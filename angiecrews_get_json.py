@@ -1,6 +1,6 @@
 """
-This example file fetches JSON data of the English Standard Version of the Bible 
-from the web and saves it to a local file named data/bible.json.
+This example file fetches JSON data of the Current weather information for Pensacola, FL
+from the web and saves it to a local file named data/weather_pensacola.json.
 
 TODO: Save a copy of the provided utils_logger.py file 
 in the same folder as this file.
@@ -94,9 +94,9 @@ def main():
     """
     Main function to demonstrate fetching JSON data.
     """
-    json_url = 'https://raw.githubusercontent.com/jadenzaleski/BibleTranslations/refs/heads/master/ESV/ESV_bible.json'
+    json_url = 'https://api.open-meteo.com/v1/forecast?latitude=30.4213&longitude=-87.2169&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=America%2FLos_Angeles'
     logger.info("Starting JSON fetch demonstration...")
-    fetch_json_file(FETCHED_DATA_DIR, "bible.json", json_url)
+    fetch_json_file(FETCHED_DATA_DIR, "weather_pensacola.json", json_url)
 
 #####################################
 # Conditional Execution
