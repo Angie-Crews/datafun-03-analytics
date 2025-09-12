@@ -279,3 +279,24 @@
 2025-09-11 21:47:51.614 | INFO     | __main__:write_json_file:81 - Writing JSON data to data\fred_a_index.json...
 2025-09-11 21:47:51.617 | INFO     | __main__:write_json_file:85 - SUCCESS: JSON data written to data\fred_a_index.json
 2025-09-11 21:47:51.617 | INFO     | __main__:fetch_json_file:61 - SUCCESS: JSON file fetched and saved as fred_a_index.json
+2025-09-11 22:02:52.066 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 22:04:38.613 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 22:06:07.258 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 22:06:07.259 | INFO     | __main__:main:12 - This is a log message from project_03.py
+2025-09-11 22:06:07.259 | INFO     | __main__:process_item:7 - Processing item: billboard 1990_count.txt
+2025-09-11 22:06:07.259 | INFO     | __main__:process_item:7 - Processing item: earthquake_magnitude.stats.txt
+2025-09-11 22:06:07.259 | INFO     | __main__:process_item:7 - Processing item: text_little_women_word_count.txt
+2025-09-12 16:30:01.020 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:30:01.021 | INFO     | __main__:main:98 - Starting JSON fetch demonstration...
+2025-09-12 16:30:01.021 | INFO     | __main__:fetch_json_file:57 - Fetching JSON data from https://raw.githubusercontent.com/sharmadhiraj/free-json-datasets/refs/heads/master/docs/climate-weather/yearly_average_surface_temperature_by_country.json...
+2025-09-12 16:30:01.636 | INFO     | __main__:write_json_file:81 - Writing JSON data to data\avg_temp_by_country.json...
+2025-09-12 16:30:01.649 | INFO     | __main__:write_json_file:85 - SUCCESS: JSON data written to data\avg_temp_by_country.json
+2025-09-12 16:30:01.649 | INFO     | __main__:fetch_json_file:61 - SUCCESS: JSON file fetched and saved as avg_temp_by_country.json
+2025-09-12 16:37:01.066 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:37:01.066 | INFO     | __main__:<module>:88 - Starting JSON processing...
+2025-09-12 16:37:01.093 | INFO     | __main__:process_json_file:81 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:37:01.093 | INFO     | __main__:<module>:90 - JSON processing complete.
+2025-09-12 16:44:15.013 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 16:44:15.013 | INFO     | __main__:<module>:91 - Starting JSON processing...
+2025-09-12 16:44:15.016 | INFO     | __main__:process_json_file:84 - Processed JSON file: data\avg_temp_by_country.json, Results saved to: processed\json_avg_temp_by_country.txt
+2025-09-12 16:44:15.016 | INFO     | __main__:<module>:93 - JSON processing complete.

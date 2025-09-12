@@ -1,6 +1,6 @@
 """
-This example file fetches JSON data of the The Fredericksburg A-index is a metric used to evaluate the accuracy of weather forecasts, 
-specifically those related to space weather from the web and saves it to a local file named data/fred_a_index.json.
+This example file fetches JSON data of the yearly average surface temperature by country 
+from the web and saves it to a local file named data/avg_temp_by_country.json.
 
 # Save a copy of the provided utils_logger.py file
 # in the same folder as this file.
@@ -94,9 +94,9 @@ def main():
     """
     Main function to demonstrate fetching JSON data.
     """
-    json_url = 'https://services.swpc.noaa.gov/json/predicted_fredericksburg_a_index.json'
+    json_url = 'https://raw.githubusercontent.com/sharmadhiraj/free-json-datasets/refs/heads/master/docs/climate-weather/yearly_average_surface_temperature_by_country.json'
     logger.info("Starting JSON fetch demonstration...")
-    fetch_json_file(FETCHED_DATA_DIR, "fred_a_index.json", json_url)
+    fetch_json_file(FETCHED_DATA_DIR, "avg_temp_by_country.json", json_url)
 
 #####################################
 # Conditional Execution
