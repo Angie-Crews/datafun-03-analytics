@@ -1,30 +1,15 @@
 """
-Process a JSON file to give information about Pensacola, Florida weather.
+Process a JSON file to Report current weather information for Pensacola, Florida and save the result.
+
+JSON file is in the format where weather is a dictionary with keys "temperature", "humidity", and "description".
 
 {
     "weather": {
-        "current": {
-            "temperature": 75,
-            "wind_speed": 5,
-            "humidity": 60
-        },
-        "hourly": [
-            {
-                "time": "2023-10-01T12:00:00Z",
-                "temperature": 76,
-                "wind_speed": 6,
-                "humidity": 58
-            },
-            {
-                "time": "2023-10-01T13:00:00Z",
-                "temperature": 77,
-                "wind_speed": 7,
-                "humidity": 57
-            }
-        ]
+        "temperature": 75,
+        "humidity": 60,
+        "description": "Partly cloudy"
     }
 }
-
 """
 
 #####################################
@@ -46,6 +31,7 @@ from utils_logger import logger
 # Declare Global Variables
 #####################################
 
+# Replace with the names of your folders
 FETCHED_DATA_DIR: str = "data"
 PROCESSED_DIR: str = "processed"
 
@@ -53,25 +39,51 @@ PROCESSED_DIR: str = "processed"
 # Define Functions
 #####################################
 
-# TODO: Add or replace this with a function that reads and processes your JSON file
+# This function reads and processes your JSON file
+
+def get_weather_info(file_path: pathlib.Path) -> dict:
+    """Extract weather information from a JSON file."""
+    try:
+        with file_path.open('r') as file:
+            weather_data = json.load(file)
+            return weather_data.get("weather", {})
+    except Exception as e:
+        logger.error(f"Error reading or processing JSON file: {e}")
+        return {}
+
 
 def process_json_file():
-    """Read weather JSON, extract info, and save the result."""
-    input_file = pathlib.Path(FETCHED_DATA_DIR, "pensacola_weather.json")
-    output_file = pathlib.Path(PROCESSED_DIR, "json_pensacola_weather.txt")
-    try:
-        with input_file.open('r', encoding='utf-8') as file:
-            data = json.load(file)
-        current_weather = data.get("weather", {}).get("current", {})
-        temperature = current_weather.get("temperature", "N/A")
-        wind_speed = current_weather.get("wind_speed", "N/A")
-        humidity = current_weather.get("humidity", "N/A")
-        output_file.parent.mkdir(parents=True, exist_ok=True)
-        with output_file.open('w', encoding='utf-8') as file:
-            file.write("Pensacola Weather - Current Conditions:\n")
-            file.write(f"Temperature: {temperature}°F\n")
-            file.write(f"Wind Speed: {wind_speed} mph\n")
-            file.write(f"Humidity: {humidity}%\n")
-        logger.info(f"Processed JSON file: {input_file}, weather info saved to: {output_file}")
-    except Exception as e:
-        logger.error(f"Error processing JSON file: {e}")
+    """Read a JSON file, count astronauts by spacecraft, and save the result."""
+
+    # Replace with path to your JSON data file
+    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "weather_pensacola.json")
+
+    # Replace with path to your JSON processed file
+    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "json_weather_pensacola.txt")
+    
+    # Call your new function to process YOUR JSON file
+    # Create a new local variable to store the result of the function call
+    weather_info = get_weather_info(input_file)
+
+    # Create the output directory if it doesn't exist
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Open the output file in write mode and write the results
+    with output_file.open('w') as file:
+        # Update the output to describe your results
+        file.write("Current weather in Pensacola, Florida:\n")
+        file.write(f"Temperature: {weather_info.get('temperature_2m', '')}°F\n")
+        file.write(f"Wind Speed: {weather_info.get('wind_speed_10m', '')}%\n")
+        file.write(f"Humidity: {weather_info.get('relative_humidity_2m', '')}\n")
+
+    # Log the processing of the JSON file
+    logger.info(f"Processed JSON file: {input_file}, Results saved to: {output_file}")
+
+#####################################
+# Main Execution
+#####################################
+
+if __name__ == "__main__":
+    logger.info("Starting JSON processing...")
+    process_json_file()
+    logger.info("JSON processing complete.")

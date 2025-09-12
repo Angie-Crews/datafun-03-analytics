@@ -256,3 +256,20 @@
 2025-09-11 20:42:08.688 | INFO     | __main__:process_weather_data:67 - Hourly weather: []
 2025-09-11 20:42:08.689 | INFO     | __main__:process_json_file:98 - Processed JSON file: data\weather_pensacola.json, Results saved to: processed\json_weather_pensacola.txt
 2025-09-11 20:42:08.689 | INFO     | __main__:<module>:103 - JSON processing complete.
+2025-09-11 20:49:28.110 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 21:24:25.640 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 21:24:25.640 | INFO     | __main__:<module>:101 - Starting JSON processing...
+2025-09-11 21:24:25.642 | INFO     | __main__:process_json_file:94 - Processed JSON file: data\weather_pensacola.json, Results saved to: processed\json_weather_pensacola.txt
+2025-09-11 21:24:25.642 | INFO     | __main__:<module>:103 - JSON processing complete.
+2025-09-11 21:27:37.183 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 21:27:37.183 | INFO     | __main__:<module>:87 - Starting JSON processing...
+2025-09-11 21:27:37.184 | INFO     | __main__:process_json_file:80 - Processed JSON file: data\weather_pensacola.json, Results saved to: processed\json_weather_pensacola.txt
+2025-09-11 21:27:37.184 | INFO     | __main__:<module>:89 - JSON processing complete.
+2025-09-11 21:32:26.139 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 21:32:26.139 | INFO     | __main__:<module>:87 - Starting JSON processing...
+2025-09-11 21:32:26.140 | INFO     | __main__:process_json_file:80 - Processed JSON file: data\weather_pensacola.json, Results saved to: processed\json_weather_pensacola.txt
+2025-09-11 21:32:26.141 | INFO     | __main__:<module>:89 - JSON processing complete.
+2025-09-11 21:35:04.921 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 21:35:04.922 | INFO     | __main__:<module>:87 - Starting JSON processing...
+2025-09-11 21:35:04.922 | INFO     | __main__:process_json_file:80 - Processed JSON file: data\weather_pensacola.json, Results saved to: processed\json_weather_pensacola.txt
+2025-09-11 21:35:04.923 | INFO     | __main__:<module>:89 - JSON processing complete.
