@@ -213,3 +213,12 @@
 2025-09-11 20:07:12.781 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
 2025-09-11 20:07:12.782 | INFO     | __main__:process_text_file:69 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
 2025-09-11 20:07:12.782 | INFO     | __main__:<module>:78 - Text processing complete.
+2025-09-11 20:10:51.975 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 20:10:51.975 | INFO     | __main__:<module>:79 - Starting text processing...
+2025-09-11 20:10:51.993 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:10:51.998 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:10:52.001 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:10:52.004 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:10:52.006 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:10:52.007 | INFO     | __main__:process_text_file:72 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
+2025-09-11 20:10:52.007 | INFO     | __main__:<module>:81 - Text processing complete.

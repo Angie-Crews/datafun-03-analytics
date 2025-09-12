@@ -31,9 +31,9 @@ PROCESSED_DIR: str = "processed"
 def count_word_occurrences(file_path: pathlib.Path, word: str) -> int:
     """Count the occurrences of a specific word in a text file (case-insensitive)."""
     try:
-        with file_path.open('r') as file:
-            content: str = file.read()
-            return content.lower().count(word.lower())
+       with open("little_women.txt", "r", encoding="utf-8-sig") as file:
+            text: str = file.read()
+            return text.lower().count(word.lower())
     except Exception as e:
         logger.error(f"Error reading text file: {e}")
         return 1
