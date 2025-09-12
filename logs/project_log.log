@@ -321,3 +321,8 @@
 2025-09-12 17:39:18.439 | INFO     | __main__:process_json_file:86 - Starting JSON processing...
 2025-09-12 17:39:18.444 | INFO     | __main__:save_results_to_text:82 - Results saved to processed\avg_temp_by_country.txt
 2025-09-12 17:39:18.444 | INFO     | __main__:process_json_file:91 - JSON processing complete.
+2025-09-12 17:47:21.523 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-12 17:47:21.524 | INFO     | __main__:main:12 - This is a log message from project_03.py
+2025-09-12 17:47:21.524 | INFO     | __main__:process_item:7 - Processing item: billboard 1990_count.txt
+2025-09-12 17:47:21.525 | INFO     | __main__:process_item:7 - Processing item: earthquake_magnitude.stats.txt
+2025-09-12 17:47:21.525 | INFO     | __main__:process_item:7 - Processing item: text_little_women_word_count.txt
