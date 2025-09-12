@@ -208,3 +208,8 @@
 2025-09-11 19:59:50.203 | INFO     | __main__:write_txt_file:80 - Writing data to data\little_women.txt...
 2025-09-11 19:59:50.208 | INFO     | __main__:write_txt_file:87 - SUCCESS: Data written to data\little_women.txt
 2025-09-11 19:59:50.208 | INFO     | __main__:fetch_txt_file:60 - SUCCESS: Text file fetched and saved as little_women.txt
+2025-09-11 20:07:12.778 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-11 20:07:12.778 | INFO     | __main__:<module>:76 - Starting text processing...
+2025-09-11 20:07:12.781 | ERROR    | __main__:count_word_occurrences:38 - Error reading text file: 'charmap' codec can't decode byte 0x9d in position 1118696: character maps to <undefined>
+2025-09-11 20:07:12.782 | INFO     | __main__:process_text_file:69 - Processed text file: data\little_women.txt, Word count saved to: processed\text_little_women_word_count.txt
+2025-09-11 20:07:12.782 | INFO     | __main__:<module>:78 - Text processing complete.

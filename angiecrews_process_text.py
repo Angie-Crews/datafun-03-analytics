@@ -48,22 +48,25 @@ def process_text_file():
     output_file = pathlib.Path(PROCESSED_DIR, "text_little_women_word_count.txt")
 
     # Replace with the word you want to count from your text file
-    word_to_count: str = "Jo"
-    word_to_count: str = "Meg"
-    word_to_count: str = "Beth"
-    word_to_count: str = "Amy"
-    word_to_count: str = "Laurie"
 
     # Make any necessary changes to the logic
-    word_count: int = count_word_occurrences(input_file, word_to_count)
+    jo_count = count_word_occurrences(input_file, "Jo")
+    meg_count = count_word_occurrences(input_file, "Meg")
+    beth_count = count_word_occurrences(input_file, "Beth")
+    amy_count = count_word_occurrences(input_file, "Amy")
+    laurie_count = count_word_occurrences(input_file, "Laurie")
 
     # Create the output directory if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
     # Write the results to the output file
     with output_file.open('w') as file:
-        #Update the output to describe your results
-        file.write(f"Occurrences of '{word_to_count}': {word_count}\n")
+        # Update the output to describe your results
+        file.write(f"Occurrences of 'Jo': {jo_count}\n")
+        file.write(f"Occurrences of 'Meg': {meg_count}\n")
+        file.write(f"Occurrences of 'Beth': {beth_count}\n")
+        file.write(f"Occurrences of 'Amy': {amy_count}\n")
+        file.write(f"Occurrences of 'Laurie': {laurie_count}\n")
     
     # Log the processing of the TEXT file
     logger.info(f"Processed text file: {input_file}, Word count saved to: {output_file}")
