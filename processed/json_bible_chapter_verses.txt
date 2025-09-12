@@ -1,0 +1,8 @@
+Bible Statistics:
+calculated_books: 0
+calculated_chapters: 0
+calculated_verses: 0
+expected_books: None
+expected_chapters: None
+expected_verses: None
+message: no message

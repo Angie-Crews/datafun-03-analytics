@@ -1,3 +1,26 @@
+"""
+Process a JSON file to count books chapters and verses of the Bible.
+JSON file is in the format where books is a list of dictionaries with keys "name", "chapters", and "verses".
+
+{
+    "Bible": [
+        {
+            "books": "Genesis",
+            "chapters": 50,
+            "verses": 1533
+        },
+        {
+            "books": "Exodus",
+            "chapters": 40,
+            "verses": 1213
+        }
+    ],
+    "number": 2,
+    "message": "success"
+}
+
+"""
+
 #####################################
 # Import Modules
 #####################################
@@ -24,72 +47,62 @@ PROCESSED_DIR: str = "processed"
 # Define Functions
 #####################################
 
-def books_of_bible(file_path: pathlib.Path) -> dict:
-    """Count the number of books, chapters, and verses from a JSON file."""
+# TODO: Add or replace this with a function that reads and processes your JSON file
+
+def count_books_chapters_verses(file_path: pathlib.Path) -> dict:
+    """Count the number of chapters and verses in each book from a JSON file."""
     try:
-        # Open the JSON file
+        # Open the JSON file using the file_path passed in as an argument
         with file_path.open('r') as file:
-            bible_data = json.load(file)
 
-        # Initialize counters
-        total_books = 0
-        total_chapters = 0
-        total_verses = 0
+            # Use the json module load() function 
+            # to read data file into a Python dictionary
+            data = json.load(file)  
 
-        # Get the list of books
-        bible_list: list = bible_data.get("bible", [])
+            # initialize an empty dictionary to store the counts
+            book_counts = {}
 
-        # Process each book entry
-        for book_entry in bible_list:
-            total_books += 1
-            # Convert string numbers like "1,533" into integers
-            chapters = int(str(book_entry.get("chapters", "0")).replace(",", ""))
-            verses = int(str(book_entry.get("verses", "0")).replace(",", ""))
-            total_chapters += chapters
-            total_verses += verses
+            # books is a list of dictionaries in the JSON file
+            books_list: list = data.get("books", [])
 
-        # Return dictionary of results
-        return {
-            "calculated_books": total_books,
-            "calculated_chapters": total_chapters,
-            "calculated_verses": total_verses,
-            "expected_books": bible_data.get("total_books"),
-            "expected_chapters": bible_data.get("total_chapters"),
-            "expected_verses": bible_data.get("total_verses"),
-            "message": bible_data.get("message", "no message")
-        }
+            # For each book in the list, get the name, chapters, and verses
+            for book_dict in books_list:  
+                name = book_dict.get("books", "Unknown")
+                chapters = book_dict.get("chapters", 0)
+                verses = book_dict.get("verses", 0)
+                book_counts[name] = {"chapters": chapters, "verses": verses}
 
+            # Return the dictionary with counts of chapters and verses by book    
+            return book_counts
     except Exception as e:
         logger.error(f"Error reading or processing JSON file: {e}")
-        return {}  # return empty dict if error
+        return {} # return an empty dictionary in case of error
 
+    """Read a JSON file, count books chapters and verses of the Bible, and save the result."""
 
 def process_json_file():
-    """Read a JSON file, count books, chapters, and verses, and save the result."""
+    """Read a JSON file, count chapters and verses by book, and save the result."""
 
-    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "bible.json")
-    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "json_bible_chapter_verses.txt")
+    # Replace with path to your JSON data file
+    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "bible_books.json")
 
-    # Call processing function
-    bible_counts = books_of_bible(input_file)
+    # Replace with path to your JSON processed file
+    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "json_books_chapters_verses.txt")
+    
+    # Call the function to process your JSON file
+    book_counts = count_books_chapters_verses(input_file)
 
-    # Create output directory if it doesn’t exist
+    # Create the output directory if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
-
-    # Save results to file
+    
+    # Open the output file in write mode and write the results
     with output_file.open('w') as file:
-        file.write("Bible Statistics:\n")
-        for key, value in bible_counts.items():
-            file.write(f"{key}: {value}\n")
-
+        file.write("Books, Chapters, and Verses:\n")
+        for book, counts in book_counts.items():
+            file.write(f"{book}: Chapters={counts['chapters']}, Verses={counts['verses']}\n")
+    
+    # Log the processing of the JSON file
     logger.info(f"Processed JSON file: {input_file}, Results saved to: {output_file}")
-
-
-#####################################
-# Main Execution
-#####################################
-
-if __name__ == "__main__":
     logger.info("Starting JSON processing...")
     process_json_file()
     logger.info("JSON processing complete.")

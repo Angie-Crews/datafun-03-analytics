@@ -1,6 +1,6 @@
 """
-This example file fetches a text file of Romeo and Juliet from the web 
-and saves it to a local file named romeo.txt in a folder named example_data.
+This example file fetches a text file of Little Women from the web 
+and saves it to a local file named little_women.txt in a folder named classics_data.
 
 Please save a copy of the provided utils_logger.py file 
 in the same folder as this file.
@@ -46,7 +46,7 @@ def fetch_txt_file(folder_name: str, filename: str, url: str) -> None:
         None
 
     Example:
-        fetch_txt_file("data", "romeo.txt", "https://example.com/romeo.txt")
+        fetch_txt_file("data", "little_women.txt", "https://example.com/little_women.txt")
     """
     if not url:
         logger.error("The URL provided is empty. Please provide a valid URL.")
@@ -93,9 +93,9 @@ def main():
     """
     Main function to demonstrate fetching text data.
     """
-    txt_url = 'https://raw.githubusercontent.com/denisecase/datafun-03-analytics/main/hosted/romeo.txt'
+    txt_url = 'https://www.gutenberg.org/cache/epub/37106/pg37106.txt'
     logger.info("Starting text fetch demonstration...")
-    fetch_txt_file(FETCHED_DATA_DIR, "romeo.txt", txt_url)
+    fetch_txt_file(FETCHED_DATA_DIR, "little_women.txt", txt_url)
 
 #####################################
 # Conditional Execution
