@@ -1,21 +1,41 @@
-import pathlib
+"""
+Master script to run fetchs and processess in sequence
+"""
+
+import subprocess
+import sys
 from utils_logger import logger
 
-datafun_03_analytics_path = pathlib.Path(__file__).parent.resolve()
+def run_scripts():
+    """List of scripts to run"""
+    scripts = [
+        'angiecrews_get_excel.py',
+        'angiecrews_process_excel.py',
+        'angiecrews_get_csv.py',
+        'angiecrews_process_csv.py',
+        'angiecrews_get_text.py',
+        'angiecrews_process_text.py',
+        'angiecrews_get_json.py',
+        'angiecrews_process_json.py'
+    ]
+   
+    """Length of scripts list"""
+   
+    print(f"Running {len(scripts)} scripts..")
+   
+    for i, script in enumerate(scripts, 1): #Using enumate to show index value along with actual script. Default is 0 overide by telling it start from 1
+        print(f"\n[{i}/{len(scripts)}] Running {script}...") #printing progress inside loop
+       
+        try:
+            subprocess.run([sys.executable, script], check=True) # run the process, raise an error and stop master sccript
+            print(f"{script} completed successfully")
+        except subprocess.CalledProcessError as e: #Exception handling
+            print(f"{script} failed with error code {e.returncode}")
+        except FileNotFoundError: #Exception handling
+            print(f"{script} not found")
+   
+    print("\nIt is Finished!")
 
-def process_item(filename):
-    logger.info(f"Processing item: {filename}")
-    print(f"Processing file: {filename}")
 
-def main():
-    print(f"DataFun 03 Analytics path: {datafun_03_analytics_path}")
-    logger.info("This is a log message from project_03.py")
-
-    process_item("billboard 1990_count.txt")
-    process_item("earthquake_magnitude.stats.txt")
-    process_item("text_little_women_word_count.txt")
 if __name__ == "__main__":
-    main()
-# This script sets up logging, defines a function to process items,
-# and runs a main function that processes specific files.
-# and runs a main function that processes specific files.
+    run_scripts()
