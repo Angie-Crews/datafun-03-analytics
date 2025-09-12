@@ -1,6 +1,6 @@
 """
 This example file fetches a text file of Little Women from the web 
-and saves it to a local file named little_women.txt in a folder named classics_data.
+and saves it to a local file named little_women.txt in a folder named data.
 
 Please save a copy of the provided utils_logger.py file 
 in the same folder as this file.
@@ -22,6 +22,7 @@ sys.path.append(str(pathlib.Path(__file__).resolve().parent))
 
 # Import local modules
 from utils_logger import logger
+from pathlib import Path
 
 #####################################
 # Declare Global Variables
